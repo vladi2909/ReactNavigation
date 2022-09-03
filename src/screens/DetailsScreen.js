@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 
-export const DetailsScreen = ({ navigation }) => {
+export const DetailsScreen = ({ navigation, route }) => {
+  console.log(route.params);
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{color: '#000'}}>Details Screen</Text>
