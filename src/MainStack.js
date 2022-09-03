@@ -1,8 +1,9 @@
 import React from 'react';
-import { Main } from './screens/Main';
-import { Contacts } from './screens/Contacts';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { HomeScreen } from './screens/HomeScreen';
+import { DetailsScreen } from './screens/DetailsScreen';
+
 
 const Stack = createStackNavigator();
 
@@ -11,13 +12,12 @@ export const MainStack = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='Main'
-          component={Main}
+          name='Home'
+          component={HomeScreen}
         />
         <Stack.Screen
-          name='Contacts'
-          component={Contacts}
-          options={{ title: 'Главная' }}
+          name='Detail'
+          component={DetailsScreen}
         />
       </Stack.Navigator>
       </NavigationContainer>
